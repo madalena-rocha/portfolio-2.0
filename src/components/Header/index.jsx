@@ -1,9 +1,9 @@
-import { List } from "@phosphor-icons/react";
+import { List, X } from "@phosphor-icons/react";
 import { useMediaQuery } from "react-responsive";
 
 import { Container } from "./styles";
 
-export function Header() {
+export function Header({ isMenuOpen, setIsMenuOpen }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
@@ -11,7 +11,13 @@ export function Header() {
       <h2><span>&lt; Madalena</span> <span>Rocha /&gt;</span></h2>
 
       {!isDesktop ? (
-        <List size={24} />
+        <>
+          {!isMenuOpen ? (
+            <List size={24} onClick={() => setIsMenuOpen(true)} />
+          ) : (
+            <X size={24} onClick={() => setIsMenuOpen(false)} />
+          )}
+        </>
       ) : (
         <nav>
           <ul>
