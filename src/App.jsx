@@ -12,11 +12,11 @@ function App() {
     <>
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       
-      {!isDesktop && isMenuOpen ? (
+      {!isDesktop && (
         <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      ) : (
-        <h1>Olá! Sou Madalena, Desenvolvedora Front-end.</h1>
       )}
+
+      <h1>Olá! Sou Madalena, Desenvolvedora Front-end.</h1>
     </>
   )
 }
