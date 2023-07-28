@@ -13,7 +13,7 @@ export const Container = styled.div`
     gap: 3.2rem;
 
     text-align: center;
-    margin-block: 6.4rem;
+    margin-top: 6.4rem;
   }
 
   .profile {
@@ -25,7 +25,6 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
     
     padding: 3.7px;
     border: 4px solid ${({ theme }) => theme.COLORS.PINK};
@@ -59,7 +58,18 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1.6rem;
-    margin-top: 1.6rem;
+    margin-top: 3.2rem;
+  }
+
+  .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 1.6rem;
   }
 
   @media (min-width: 1024px) {

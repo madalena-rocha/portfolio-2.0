@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  margin-block: 6.4rem;
+
   > h2 {
-    margin-bottom: 1.6rem;
+    margin-bottom: 3.2rem;
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 `;

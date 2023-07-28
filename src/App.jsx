@@ -5,11 +5,12 @@ import { Container } from "./App.js";
 
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
+import { Link } from "./components/Link/index.jsx";
 import { Section } from "./components/Section";
 import { Skill } from "./components/Skill";
+import { Project } from "./components/Project";
 
 import { LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
-import { Link } from "./components/Link/index.jsx";
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -89,6 +90,49 @@ function App() {
             {skillsData.map((skill, index) => (
               <Skill key={index} icon={skill.icon} title={skill.title} />
             ))}
+          </div>
+        </Section>
+
+        <Section id="projects" title="Projetos">
+          <div className="carousel">
+            <Project 
+              title="Food Explorer"
+              repo="food-explorer-frontend" 
+              demo="https://food-explorer-frontend-80e47f.netlify.app/" 
+              description="Cardápio digital para um restaurante fictício."
+              path="blob/main/src/assets/home.png?raw=true"
+            >
+              <div className="tags">
+                <span>ReactJS</span>
+                <span>Node.js</span>
+              </div>
+            </Project>
+
+            <Project 
+              title="Rocket Movies"
+              repo="rocket-movies" 
+              demo="https://rocket-movies-app.netlify.app/" 
+              description="Aplicação para acompanhar tudo que assistir."
+              path="blob/main/src/assets/home.png?raw=true"
+            >
+              <div className="tags">
+                <span>ReactJS</span>
+                <span>Node.js</span>
+              </div>
+            </Project>
+
+            <Project 
+              title="Rocket Notes"
+              repo="rocket-notes" 
+              demo="https://rocket-notes-app.netlify.app/" 
+              description="Aplicação para salvar e gerenciar links úteis."
+              path="blob/main/src/assets/home.png?raw=true"
+            >
+              <div className="tags">
+                <span>ReactJS</span>
+                <span>Node.js</span>
+              </div>
+            </Project>
           </div>
         </Section>
       </main>
