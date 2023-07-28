@@ -47,17 +47,6 @@ export const Container = styled.div`
     gap: 1.6rem;
   }
 
-  .links a {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    
-    width: fit-content;
-    padding: 0.8rem 1.6rem;
-    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
-    border-radius: 0.8rem;
-  }
-
   @media (min-width: 1024px) {
     main {
       padding: 0 12.3rem;
