@@ -6,6 +6,7 @@ import { Container } from "./App.js";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
 import { Section } from "./components/Section";
+import { Skill } from "./components/Skill";
 
 import { LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
 import { Link } from "./components/Link/index.jsx";
@@ -13,6 +14,19 @@ import { Link } from "./components/Link/index.jsx";
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const skillsData = [
+    { icon: "html", title: "HTML" },
+    { icon: "css", title: "CSS" },
+    { icon: "javascript", title: "JavaScript" },
+    { icon: "git", title: "Git" },
+    { icon: "react", title: "ReactJS" },
+    { icon: "styledcomponents", title: "Styled Components" },
+    { icon: "figma", title: "Figma" },
+    { icon: "nodejs", title: "Node.js" },
+    { icon: "sqlite", title: "SQLite" },
+    { icon: "express", title: "Express" },
+  ];  
 
   return (
     <Container>
@@ -72,36 +86,9 @@ function App() {
           </p>
 
           <div className="skills">
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=html" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=css" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=javascript" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=git" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=react" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=styledcomponents" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=figma" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=nodejs" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=sqlite" />
-            </a>
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=express" />
-            </a>
+            {skillsData.map((skill, index) => (
+              <Skill key={index} icon={skill.icon} title={skill.title} />
+            ))}
           </div>
         </Section>
       </main>
