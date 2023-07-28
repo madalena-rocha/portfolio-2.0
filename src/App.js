@@ -13,7 +13,7 @@ export const Container = styled.div`
     gap: 3.2rem;
 
     text-align: center;
-    margin-top: 6.4rem;
+    margin-block: 6.4rem;
   }
 
   .profile {
@@ -45,6 +45,21 @@ export const Container = styled.div`
     justify-content: center;
     margin-top: 3.2rem;
     gap: 1.6rem;
+  }
+
+  #about p + p {
+    margin-top: 1.6rem;
+  }
+
+  #about p span {
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-top: 1.6rem;
   }
 
   @media (min-width: 1024px) {
