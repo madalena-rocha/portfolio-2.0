@@ -11,6 +11,7 @@ import { Link } from "./components/Link/index.jsx";
 import { Section } from "./components/Section";
 import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
+import { Tag } from "./components/Tag";
 
 import { register } from 'swiper/element/bundle';
 register();
@@ -151,7 +152,7 @@ function App() {
                 >
                   <div className="tags">
                     {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex}>{tag}</span>
+                      <Tag key={tagIndex} title={tag} />
                     ))}
                   </div>
                 </Project>

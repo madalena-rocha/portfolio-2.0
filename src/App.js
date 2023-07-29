@@ -71,7 +71,8 @@ export const Container = styled.div`
   
   .tags {
     display: flex;
-    gap: 1.6rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
   }
 
   @media (min-width: 1024px) {
