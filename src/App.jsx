@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
+import { LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
+
 import { Container } from "./App.js";
 
 import { Header } from "./components/Header";
@@ -10,7 +12,8 @@ import { Section } from "./components/Section";
 import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
 
-import { LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
+import { register } from 'swiper/element/bundle';
+register();
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -28,6 +31,41 @@ function App() {
     { icon: "sqlite", title: "SQLite" },
     { icon: "express", title: "Express" },
   ];  
+
+  const projectsData = [
+    {
+      title: "Food Explorer",
+      repo: "food-explorer-frontend",
+      demo: "https://food-explorer-frontend-80e47f.netlify.app/",
+      description: "Cardápio digital para um restaurante fictício.",
+      path: "blob/main/src/assets/home.png?raw=true",
+      tags: ["ReactJS", "Node.js"],
+    },
+    {
+      title: "Rocket Movies",
+      repo: "rocket-movies",
+      demo: "https://rocket-movies-app.netlify.app/",
+      description: "Aplicação para acompanhar tudo que assistir.",
+      path: "blob/main/src/assets/home.png?raw=true",
+      tags: ["ReactJS", "Node.js"],
+    },
+    {
+      title: "Rocket Notes",
+      repo: "rocket-notes",
+      demo: "https://rocket-notes-app.netlify.app/",
+      description: "Aplicação para salvar e gerenciar links úteis.",
+      path: "blob/main/src/assets/home.png?raw=true",
+      tags: ["ReactJS", "Node.js"],
+    },
+    {
+      title: "Minicactus Games",
+      repo: "minicactus-games",
+      demo: "https://www.minicactusgames.com/",
+      description: "Site da Minicactus Games, um estúdio brasileiro de jogos.",
+      path: "blob/main/assets/minicactus-games.png?raw=true",
+      tags: ["HTML", "CSS", "JavaScript"],
+    },
+  ];
 
   return (
     <Container>
@@ -94,46 +132,32 @@ function App() {
         </Section>
 
         <Section id="projects" title="Projetos">
-          <div className="carousel">
-            <Project 
-              title="Food Explorer"
-              repo="food-explorer-frontend" 
-              demo="https://food-explorer-frontend-80e47f.netlify.app/" 
-              description="Cardápio digital para um restaurante fictício."
-              path="blob/main/src/assets/home.png?raw=true"
-            >
-              <div className="tags">
-                <span>ReactJS</span>
-                <span>Node.js</span>
-              </div>
-            </Project>
-
-            <Project 
-              title="Rocket Movies"
-              repo="rocket-movies" 
-              demo="https://rocket-movies-app.netlify.app/" 
-              description="Aplicação para acompanhar tudo que assistir."
-              path="blob/main/src/assets/home.png?raw=true"
-            >
-              <div className="tags">
-                <span>ReactJS</span>
-                <span>Node.js</span>
-              </div>
-            </Project>
-
-            <Project 
-              title="Rocket Notes"
-              repo="rocket-notes" 
-              demo="https://rocket-notes-app.netlify.app/" 
-              description="Aplicação para salvar e gerenciar links úteis."
-              path="blob/main/src/assets/home.png?raw=true"
-            >
-              <div className="tags">
-                <span>ReactJS</span>
-                <span>Node.js</span>
-              </div>
-            </Project>
-          </div>
+          <swiper-container
+            space-between="32"
+            slides-per-view="auto"
+            autoplay="true"
+            loop="true"
+            grab-cursor="true"
+            pagination="true"
+          >
+            {projectsData.map((project, index) => (
+              <swiper-slide key={index}>
+                <Project
+                  title={project.title}
+                  repo={project.repo}
+                  demo={project.demo}
+                  description={project.description}
+                  path={project.path}
+                >
+                  <div className="tags">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex}>{tag}</span>
+                    ))}
+                  </div>
+                </Project>
+              </swiper-slide>
+            ))}
+          </swiper-container>
         </Section>
       </main>
     </Container>

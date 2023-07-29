@@ -9,6 +9,7 @@ export const Container = styled.div`
   border-radius: 12px;
   
   max-width: 40rem;
+  height: 40rem;
   padding: 3.2rem;
 
   .header {

@@ -61,10 +61,12 @@ export const Container = styled.div`
     margin-top: 3.2rem;
   }
 
-  .carousel {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3.2rem;
+  swiper-slide {
+    max-width: 40rem;
+  }
+
+  swiper-slide img {
+    max-height: 19.291rem;
   }
   
   .tags {

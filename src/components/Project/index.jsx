@@ -9,10 +9,14 @@ export function Project({ title, repo, demo, description, path, children }) {
         <h3>{title}</h3>
 
         <div className="icons">
-          <a href={`https://github.com/madalena-rocha/${repo}`} target="_blank">
+          <a 
+            href={`https://github.com/madalena-rocha/${repo}`} 
+            target="_blank" 
+            title="Repositório"
+          >
             <GithubLogo size={24} />
           </a>
-          <a href={demo} target="_blank">
+          <a href={demo} target="_blank" title="Deploy">
             <Rocket size={24} />
           </a>
         </div>
