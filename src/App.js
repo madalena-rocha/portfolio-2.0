@@ -43,7 +43,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 3.2rem;
-    gap: 1.6rem;
+    gap: 2.4rem;
   }
 
   #about p + p {
@@ -65,8 +65,12 @@ export const Container = styled.div`
     max-width: 40rem;
   }
 
-  swiper-slide img {
+  #projects swiper-slide img {
     max-height: 19.291rem;
+  }
+
+  #certificates swiper-slide img {
+    max-height: 28.298rem;
   }
   
   .tags {

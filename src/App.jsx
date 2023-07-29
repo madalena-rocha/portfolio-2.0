@@ -13,7 +13,7 @@ import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
 import { Tag } from "./components/Tag";
 
-import { register } from 'swiper/element/bundle';
+import { register } from "swiper/element/bundle";
 register();
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
     { icon: "nodejs", title: "Node.js" },
     { icon: "sqlite", title: "SQLite" },
     { icon: "express", title: "Express" },
-  ];  
+  ];
 
   const projectsData = [
     {
@@ -158,6 +158,46 @@ function App() {
                 </Project>
               </swiper-slide>
             ))}
+          </swiper-container>
+        </Section>
+
+        <Section id="certificates" title="Certificados">
+          <swiper-container
+            space-between="32"
+            slides-per-view="auto"
+            loop="true"
+            grab-cursor="true"
+          >
+            <swiper-slide>
+              <img
+                src="https://imgur.com/a7vUE7h.png"
+                alt="Certificado do programa Explorer da Rocketseat."
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="https://imgur.com/vVoOYgO.png"
+                alt="Certificado do curso Desenvolvimento Web Front End Node da Digital House."
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="https://imgur.com/1YmADpf.png"
+                alt="Certificado da Trilha Especializar do Discover da Rocketseat."
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="https://imgur.com/HwCfb8y.png"
+                alt="Certificado da Trilha Fundamentar do Discover da Rocketseat."
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                src="https://imgur.com/5IUY5BG.png"
+                alt="Certificado da Trilha Conectar do Discover da Rocketseat."
+              />
+            </swiper-slide>
           </swiper-container>
         </Section>
       </main>
