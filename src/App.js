@@ -78,6 +78,18 @@ export const Container = styled.div`
     flex-wrap: wrap;
     gap: 0.8rem;
   }
+  
+  #contact > div {
+    text-align: center;
+  }
+
+  #contact p {
+    font-size: 1.8rem;
+  }
+
+  #contact .links {
+    justify-content: center;
+  }
 
   @media (min-width: 1024px) {
     main {

@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-import { LinkedinLogo, GithubLogo } from "@phosphor-icons/react";
+import {
+  LinkedinLogo,
+  GithubLogo,
+  Envelope,
+  DiscordLogo,
+} from "@phosphor-icons/react";
 
 import { Container } from "./App.js";
 
@@ -199,6 +204,25 @@ function App() {
               </swiper-slide>
             ))}
           </swiper-container>
+        </Section>
+
+        <Section id="contact" title="Contato">
+          <div>
+            <p>Vamos construir algo juntos?</p>
+
+            <div className="links">
+              <Link href="mailto:rochamada1997m@gmail.com" title="E-mail">
+                <Envelope size={24} />
+              </Link>
+
+              <Link
+                href="http://discordapp.com/users/827312692905377802"
+                title="Discord"
+              >
+                <DiscordLogo size={24} />
+              </Link>
+            </div>
+          </div>
         </Section>
       </main>
     </Container>
