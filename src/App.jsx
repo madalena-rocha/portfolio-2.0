@@ -18,6 +18,7 @@ import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
 import { Tag } from "./components/Tag";
 import { Certificate } from "./components/Certificate";
+import { Footer } from "./components/Footer";
 
 import { register } from "swiper/element/bundle";
 register();
@@ -225,6 +226,8 @@ function App() {
           </div>
         </Section>
       </main>
+
+      <Footer />
     </Container>
   );
 }
