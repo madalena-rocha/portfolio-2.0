@@ -12,6 +12,7 @@ import { Section } from "./components/Section";
 import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
 import { Tag } from "./components/Tag";
+import { Certificate } from "./components/Certificate";
 
 import { register } from "swiper/element/bundle";
 register();
@@ -65,6 +66,29 @@ function App() {
       description: "Site da Minicactus Games, um estúdio brasileiro de jogos.",
       path: "blob/main/assets/minicactus-games.png?raw=true",
       tags: ["HTML", "CSS", "JavaScript"],
+    },
+  ];
+
+  const certificatesData = [
+    {
+      src: "https://imgur.com/a7vUE7h.png",
+      alt: "Certificado do programa Explorer da Rocketseat.",
+    },
+    {
+      src: "https://imgur.com/vVoOYgO.png",
+      alt: "Certificado do curso Desenvolvimento Web Front End Node da Digital House.",
+    },
+    {
+      src: "https://imgur.com/1YmADpf.png",
+      alt: "Certificado da Trilha Especializar do Discover da Rocketseat.",
+    },
+    {
+      src: "https://imgur.com/HwCfb8y.png",
+      alt: "Certificado da Trilha Fundamentar do Discover da Rocketseat.",
+    },
+    {
+      src: "https://imgur.com/5IUY5BG.png",
+      alt: "Certificado da Trilha Conectar do Discover da Rocketseat.",
     },
   ];
 
@@ -165,39 +189,15 @@ function App() {
           <swiper-container
             space-between="32"
             slides-per-view="auto"
+            autoplay="true"
             loop="true"
             grab-cursor="true"
           >
-            <swiper-slide>
-              <img
-                src="https://imgur.com/a7vUE7h.png"
-                alt="Certificado do programa Explorer da Rocketseat."
-              />
-            </swiper-slide>
-            <swiper-slide>
-              <img
-                src="https://imgur.com/vVoOYgO.png"
-                alt="Certificado do curso Desenvolvimento Web Front End Node da Digital House."
-              />
-            </swiper-slide>
-            <swiper-slide>
-              <img
-                src="https://imgur.com/1YmADpf.png"
-                alt="Certificado da Trilha Especializar do Discover da Rocketseat."
-              />
-            </swiper-slide>
-            <swiper-slide>
-              <img
-                src="https://imgur.com/HwCfb8y.png"
-                alt="Certificado da Trilha Fundamentar do Discover da Rocketseat."
-              />
-            </swiper-slide>
-            <swiper-slide>
-              <img
-                src="https://imgur.com/5IUY5BG.png"
-                alt="Certificado da Trilha Conectar do Discover da Rocketseat."
-              />
-            </swiper-slide>
+            {certificatesData.map((certificate, index) => (
+              <swiper-slide key={index}>
+                <Certificate src={certificate.src} alt={certificate.alt} />
+              </swiper-slide>
+            ))}
           </swiper-container>
         </Section>
       </main>
