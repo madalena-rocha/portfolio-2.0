@@ -6,4 +6,9 @@ export const Container = styled.span`
   border-radius: 0.8rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

@@ -11,27 +11,27 @@ export const Container = styled.div`
   max-width: 40rem;
   height: 40rem;
   padding: 3.2rem;
+`;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.6rem;
-  }
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
 
-  h3 {
+  > h3 {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
+`;
 
-  .icons {
-    display: flex;
-    gap: 0.8rem;
-  }
+export const Icons = styled.div`
+  display: flex;
+  gap: 0.8rem;
+`;
 
-  .preview {
-    max-height: 19.291rem;
-  }
+export const Preview = styled.div`
+  max-height: 19.291rem;
 
-  .preview img {
+  > img {
     width: 100%;
     height: 100%;
     object-fit: cover;

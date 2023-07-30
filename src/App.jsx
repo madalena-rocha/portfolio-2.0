@@ -8,7 +8,15 @@ import {
   DiscordLogo,
 } from "@phosphor-icons/react";
 
-import { Container } from "./App.js";
+import {
+  Container,
+  Home,
+  Profile,
+  Presentation,
+  Links,
+  Skills,
+  Tags,
+} from "./App.js";
 
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
@@ -107,21 +115,21 @@ function App() {
       )}
 
       <main>
-        <section id="home">
-          <div className="profile">
+        <Home>
+          <Profile>
             <img
               src="https://github.com/madalena-rocha.png"
               alt="Mulher de pele parda e cabelos castanhos lisos, usando uma camiseta preta e sorrindo."
             />
-          </div>
+          </Profile>
 
-          <div>
+          <Presentation>
             <h1>
               Olá! Sou <span>Madalena</span>, <br></br> Desenvolvedora
               Front-end.
             </h1>
 
-            <div className="links">
+            <Links>
               <Link
                 href="https://www.linkedin.com/in/madalena-machado-rocha/"
                 title="LinkedIn"
@@ -132,9 +140,9 @@ function App() {
               <Link href="https://github.com/madalena-rocha" title="GitHub">
                 <GithubLogo size={24} />
               </Link>
-            </div>
-          </div>
-        </section>
+            </Links>
+          </Presentation>
+        </Home>
 
         <Section id="about" title="Sobre">
           <p>
@@ -155,11 +163,11 @@ function App() {
             pessoas.
           </p>
 
-          <div className="skills">
+          <Skills>
             {skillsData.map((skill, index) => (
               <Skill key={index} icon={skill.icon} title={skill.title} />
             ))}
-          </div>
+          </Skills>
         </Section>
 
         <Section id="projects" title="Projetos">
@@ -180,11 +188,11 @@ function App() {
                   description={project.description}
                   path={project.path}
                 >
-                  <div className="tags">
+                  <Tags>
                     {project.tags.map((tag, tagIndex) => (
                       <Tag key={tagIndex} title={tag} />
                     ))}
-                  </div>
+                  </Tags>
                 </Project>
               </swiper-slide>
             ))}
@@ -211,7 +219,7 @@ function App() {
           <div>
             <p>Vamos construir algo juntos?</p>
 
-            <div className="links">
+            <Links>
               <Link href="mailto:rochamada1997m@gmail.com" title="E-mail">
                 <Envelope size={24} />
               </Link>
@@ -222,7 +230,7 @@ function App() {
               >
                 <DiscordLogo size={24} />
               </Link>
-            </div>
+            </Links>
           </div>
         </Section>
       </main>

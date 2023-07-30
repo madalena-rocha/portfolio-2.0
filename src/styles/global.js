@@ -11,16 +11,27 @@ export default createGlobalStyle`
     font-size: 62.5%;
     --swiper-pagination-color: ${({ theme }) => theme.COLORS.WHITE};
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   body {
+    font-family: 'Inter', sans-serif;
+	  font-size: 1.6rem;
+
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     color: ${({ theme }) => theme.COLORS.WHITE};
 		-webkit-font-smoothing: antialiased;
   }
 
-  body, button {
-	  font-family: 'Inter', sans-serif;
-	  font-size: 1.6rem;
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 0.8rem;
   }
 
   a {
@@ -32,12 +43,13 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  button, a {
+  a, li {
     cursor: pointer;
-    transition: filter 0.2s;
+    transition: filter 0.2s, transform 0.5s;
   }
   
-  button:hover, a:hover {
+  a:hover, li:hover {
     filter: brightness(0.9);
+    transform: scale(1.1);
   }
 `;

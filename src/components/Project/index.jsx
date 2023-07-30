@@ -1,14 +1,14 @@
 import { GithubLogo, Rocket } from "@phosphor-icons/react";
 
-import { Container } from "./styles";
+import { Container, Header, Icons, Preview } from "./styles";
 
 export function Project({ title, repo, demo, description, path, children }) {
   return (
     <Container>
-      <div className="header">
+      <Header>
         <h3>{title}</h3>
 
-        <div className="icons">
+        <Icons>
           <a 
             href={`https://github.com/madalena-rocha/${repo}`} 
             target="_blank" 
@@ -19,14 +19,14 @@ export function Project({ title, repo, demo, description, path, children }) {
           <a href={demo} target="_blank" title="Deploy">
             <Rocket size={24} />
           </a>
-        </div>
-      </div>
+        </Icons>
+      </Header>
       
       <p>{description}</p>
 
-      <div className="preview">
+      <Preview>
         <img src={`https://github.com/madalena-rocha/${repo}/${path}`} />
-      </div>
+      </Preview>
       
       {children}
     </Container>
