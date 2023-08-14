@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import {
@@ -24,6 +24,7 @@ import { Section } from "./components/Section";
 import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
 import { Certificate } from "./components/Certificate";
+import { BackToTop } from "./components/BackToTop";
 import { Footer } from "./components/Footer";
 
 import { register } from "swiper/element/bundle";
@@ -32,6 +33,22 @@ register();
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const skillsData = [
     { icon: "html", title: "HTML" },
@@ -251,6 +268,8 @@ function App() {
           </div>
         </Section>
       </main>
+
+      {showBackToTop && <BackToTop />}
 
       <Footer />
     </Container>
