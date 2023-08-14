@@ -35,6 +35,25 @@ export const Brand = styled.div`
 
 export const Icon = styled.div`
   display: flex;
+
+  > svg {
+    position: absolute;
+    top: 50%;
+    right: 2.8rem;
+    transform: translateY(-50%);
+
+    transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
+
+    &:nth-child(1) {
+      visibility: ${({ isMenuOpen }) => (isMenuOpen ? "hidden" : "visible")};
+      opacity: ${({ isMenuOpen }) => (isMenuOpen ? "0" : "1")};
+    }
+
+    &:nth-child(2) {
+      visibility: ${({ isMenuOpen }) => (isMenuOpen ? "visible" : "hidden")};
+      opacity: ${({ isMenuOpen }) => (isMenuOpen ? "1" : "0")};
+    }
+  }
 `;
 
 export const Navigation = styled.nav`
