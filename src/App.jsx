@@ -15,7 +15,6 @@ import {
   Presentation,
   Links,
   Skills,
-  Tags,
 } from "./App.js";
 
 import { Header } from "./components/Header";
@@ -24,7 +23,6 @@ import { Link } from "./components/Link/index.jsx";
 import { Section } from "./components/Section";
 import { Skill } from "./components/Skill";
 import { Project } from "./components/Project";
-import { Tag } from "./components/Tag";
 import { Certificate } from "./components/Certificate";
 import { Footer } from "./components/Footer";
 
@@ -45,7 +43,7 @@ function App() {
     { icon: "figma", title: "Figma" },
     { icon: "nodejs", title: "Node.js" },
     { icon: "sqlite", title: "SQLite" },
-    { icon: "express", title: "Express" },
+    { icon: "express", title: "Express.js" },
   ];
 
   const projectsData = [
@@ -54,31 +52,55 @@ function App() {
       repo: "food-explorer-frontend",
       demo: "https://food-explorer-frontend-80e47f.netlify.app/",
       description: "Cardápio digital para um restaurante fictício.",
-      path: "blob/main/src/assets/home.png?raw=true",
-      tags: ["ReactJS", "Node.js"],
+      path: "https://imgur.com/SBK6HAH.png",
+      tags: [
+        "Axios",
+        "Express.js",
+        "Knex.js",
+        "Node.js",
+        "ReactJS",
+        "SQLite",
+        "Styled Components",
+      ],
     },
     {
       title: "Rocket Movies",
       repo: "rocket-movies",
       demo: "https://rocket-movies-app.netlify.app/",
       description: "Aplicação para acompanhar tudo que assistir.",
-      path: "blob/main/src/assets/home.png?raw=true",
-      tags: ["ReactJS", "Node.js"],
+      path: "https://imgur.com/gh3zApk.png",
+      tags: [
+        "Axios",
+        "Express.js",
+        "Knex.js",
+        "Node.js",
+        "ReactJS",
+        "SQLite",
+        "Styled Components",
+      ],
     },
     {
       title: "Rocket Notes",
       repo: "rocket-notes",
       demo: "https://rocket-notes-app.netlify.app/",
       description: "Aplicação para salvar e gerenciar links úteis.",
-      path: "blob/main/src/assets/home.png?raw=true",
-      tags: ["ReactJS", "Node.js"],
+      path: "https://imgur.com/E2SLeUr.png",
+      tags: [
+        "Axios",
+        "Express.js",
+        "Knex.js",
+        "Node.js",
+        "ReactJS",
+        "SQLite",
+        "Styled Components",
+      ],
     },
     {
       title: "Minicactus Games",
       repo: "minicactus-games",
       demo: "https://www.minicactusgames.com/",
       description: "Site da Minicactus Games, um estúdio brasileiro de jogos.",
-      path: "blob/main/assets/minicactus-games.png?raw=true",
+      path: "https://imgur.com/q4puBF7.png",
       tags: ["HTML", "CSS", "JavaScript"],
     },
   ];
@@ -107,7 +129,7 @@ function App() {
   ];
 
   return (
-    <Container>
+    <Container id="home">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       {!isDesktop && (
@@ -187,13 +209,8 @@ function App() {
                   demo={project.demo}
                   description={project.description}
                   path={project.path}
-                >
-                  <Tags>
-                    {project.tags.map((tag, tagIndex) => (
-                      <Tag key={tagIndex} title={tag} />
-                    ))}
-                  </Tags>
-                </Project>
+                  tags={project.tags}
+                />
               </swiper-slide>
             ))}
           </swiper-container>

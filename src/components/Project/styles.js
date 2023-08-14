@@ -9,8 +9,11 @@ export const Container = styled.div`
   border-radius: 12px;
   
   max-width: 40rem;
-  height: 40rem;
   padding: 3.2rem;
+
+  @media (min-width: 1024px) {
+    height: 52.288rem;
+  }
 `;
 
 export const Header = styled.div`
@@ -29,12 +32,26 @@ export const Icons = styled.div`
 `;
 
 export const Preview = styled.div`
-  max-height: 19.291rem;
-
   > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
+
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
+
+  @media (min-width: 1024px) {
+    height: 23.589rem;
+  }
+`;
+
+export const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.6rem;
 `;

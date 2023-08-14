@@ -11,7 +11,7 @@ export const Container = styled.div`
   > main {
     grid-area: content;
 
-    width: 100vw;
+    width: 100%;
     padding: 0 2.8rem;
   }
 
@@ -27,20 +27,14 @@ export const Container = styled.div`
     max-width: 40rem;
   }
 
-  swiper-slide img {
+  #certificates swiper-slide img {
+    height: 28.298rem;
+
     transition: transform 0.5s;
 
     &:hover {
       transform: scale(1.1);
     }
-  }
-
-  #projects swiper-slide img {
-    max-height: 19.291rem;
-  }
-
-  #certificates swiper-slide img {
-    max-height: 28.298rem;
   }
   
   #contact > div {
@@ -119,10 +113,4 @@ export const Skills = styled.div`
   flex-wrap: wrap;
   gap: 1.6rem;
   margin-top: 3.2rem;
-`;
-
-export const Tags = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.6rem;
 `;
