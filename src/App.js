@@ -26,16 +26,6 @@ export const Container = styled.div`
   swiper-slide {
     max-width: 40rem;
   }
-
-  #certificates swiper-slide img {
-    height: 28.298rem;
-
-    transition: transform 0.5s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
   
   #contact > div {
     text-align: center;

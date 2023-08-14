@@ -128,6 +128,22 @@ function App() {
       alt: "Certificado do programa Explorer da Rocketseat.",
     },
     {
+      src: "https://imgur.com/C5JAJyX.png",
+      alt: "Certificado da Codecon Digital 2023.",
+    },
+    {
+      src: "https://imgur.com/Pmjinm4.png",
+      alt: "Certificado da capacitação Adas da SCM (Se Candidate, Mulher!) Academy.",
+    },
+    {
+      src: "https://imgur.com/o4LEUTB.png",
+      alt: "Certificado do Hackathon #01 da Orange Juice.",
+    },
+    {
+      src: "https://imgur.com/3TrfYSP.png",
+      alt: "Certificado da Masterclass Foco React da Rocketseat.",
+    },
+    {
       src: "https://imgur.com/vVoOYgO.png",
       alt: "Certificado do curso Desenvolvimento Web Front End Node da Digital House.",
     },
