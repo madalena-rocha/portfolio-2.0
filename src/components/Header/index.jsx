@@ -25,6 +25,12 @@ export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
             <li>
               <a
                 href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({
+                    top: 0,
+                  });
+                }}
                 className={activeSection === "home" ? "active" : ""}
               >
                 Home
