@@ -11,8 +11,27 @@ export const Container = styled.div`
   > main {
     grid-area: content;
 
-    width: 100%;
+    width: 100vw;
     padding: 0 2.8rem;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  #home > h2 {
+    display: none;
   }
 
   #about p + p {
@@ -41,24 +60,9 @@ export const Container = styled.div`
 
   @media (min-width: 1024px) {
     > main {
+      width: 100%;
       padding: 0 12.3rem;
     }
-  }
-`;
-
-export const Home = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-
-  text-align: center;
-  margin-top: 6.4rem;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    text-align: left;
   }
 `;
 

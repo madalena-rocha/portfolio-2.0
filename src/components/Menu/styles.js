@@ -19,4 +19,8 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 3.2rem;
   }
+
+  .active {
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
 `;

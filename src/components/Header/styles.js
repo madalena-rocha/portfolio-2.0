@@ -61,4 +61,8 @@ export const Navigation = styled.nav`
     display: flex;
     gap: 3.2rem;
   }
+
+  .active {
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
 `;

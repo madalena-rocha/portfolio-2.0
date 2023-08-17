@@ -10,7 +10,6 @@ import {
 
 import {
   Container,
-  Home,
   Profile,
   Presentation,
   Links,
@@ -34,6 +33,7 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,15 +162,23 @@ function App() {
   ];
 
   return (
-    <Container id="home">
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+    <Container>
+      <Header
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        activeSection={activeSection}
+      />
 
       {!isDesktop && (
-        <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Menu
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          activeSection={activeSection}
+        />
       )}
 
       <main>
-        <Home>
+        <Section id="home" title="" setActiveSection={setActiveSection}>
           <Profile>
             <img
               src="https://github.com/madalena-rocha.png"
@@ -197,9 +205,9 @@ function App() {
               </Link>
             </Links>
           </Presentation>
-        </Home>
+        </Section>
 
-        <Section id="about" title="Sobre">
+        <Section id="about" title="Sobre" setActiveSection={setActiveSection}>
           <p>
             Sou uma Engenheira Mecânica que se apaixonou pelo mundo do
             Desenvolvimento Front-end.
@@ -225,7 +233,11 @@ function App() {
           </Skills>
         </Section>
 
-        <Section id="projects" title="Projetos">
+        <Section
+          id="projects"
+          title="Projetos"
+          setActiveSection={setActiveSection}
+        >
           <swiper-container
             space-between="32"
             slides-per-view="auto"
@@ -249,7 +261,11 @@ function App() {
           </swiper-container>
         </Section>
 
-        <Section id="certificates" title="Certificados">
+        <Section
+          id="certificates"
+          title="Certificados"
+          setActiveSection={setActiveSection}
+        >
           <swiper-container
             space-between="32"
             slides-per-view="auto"
@@ -265,7 +281,11 @@ function App() {
           </swiper-container>
         </Section>
 
-        <Section id="contact" title="Contato">
+        <Section
+          id="contact"
+          title="Contato"
+          setActiveSection={setActiveSection}
+        >
           <div>
             <p>Vamos construir algo juntos?</p>
 

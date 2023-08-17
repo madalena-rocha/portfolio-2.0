@@ -3,13 +3,15 @@ import { useMediaQuery } from "react-responsive";
 
 import { Container, Brand, Icon, Navigation } from "./styles";
 
-export function Header({ isMenuOpen, setIsMenuOpen }) {
+export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
     <Container>
       <Brand>
-        <h2><span>&lt; Madalena</span> <span>Rocha /&gt;</span></h2>
+        <h2>
+          <span>&lt; Madalena</span> <span>Rocha /&gt;</span>
+        </h2>
       </Brand>
 
       {!isDesktop ? (
@@ -20,11 +22,46 @@ export function Header({ isMenuOpen, setIsMenuOpen }) {
       ) : (
         <Navigation>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#certificates">Certificados</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li>
+              <a
+                href="#home"
+                className={activeSection === "home" ? "active" : ""}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className={activeSection === "about" ? "active" : ""}
+              >
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                className={activeSection === "projects" ? "active" : ""}
+              >
+                Projetos
+              </a>
+            </li>
+            <li>
+              <a
+                href="#certificates"
+                className={activeSection === "certificates" ? "active" : ""}
+              >
+                Certificados
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className={activeSection === "contact" ? "active" : ""}
+              >
+                Contato
+              </a>
+            </li>
           </ul>
         </Navigation>
       )}
