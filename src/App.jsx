@@ -8,13 +8,7 @@ import {
   DiscordLogo,
 } from "@phosphor-icons/react";
 
-import {
-  Container,
-  Profile,
-  Presentation,
-  Links,
-  Skills,
-} from "./App.js";
+import { Container, Profile, Presentation, Links, Skills } from "./App.js";
 
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
@@ -34,6 +28,13 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  function handleSectionScroll(sectionId) {
+    const headerHeight = document.getElementById("header").offsetHeight;
+    const section = document.getElementById(sectionId);
+    const offsetTop = section.offsetTop - headerHeight;
+    window.scrollTo({ top: offsetTop });
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -167,6 +168,7 @@ function App() {
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         activeSection={activeSection}
+        handleSectionScroll={handleSectionScroll}
       />
 
       {!isDesktop && (
@@ -174,6 +176,7 @@ function App() {
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
           activeSection={activeSection}
+          handleSectionScroll={handleSectionScroll}
         />
       )}
 
@@ -305,7 +308,7 @@ function App() {
         </Section>
       </main>
 
-      {showBackToTop && <BackToTop />}
+      {showBackToTop && <BackToTop handleSectionScroll={handleSectionScroll} />}
 
       <Footer />
     </Container>

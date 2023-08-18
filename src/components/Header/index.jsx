@@ -3,11 +3,16 @@ import { useMediaQuery } from "react-responsive";
 
 import { Container, Brand, Icon, Navigation } from "./styles";
 
-export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
+export function Header({
+  isMenuOpen,
+  setIsMenuOpen,
+  activeSection,
+  handleSectionScroll,
+}) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
-    <Container>
+    <Container id="header">
       <Brand>
         <h2>
           <span>&lt; Madalena</span> <span>Rocha /&gt;</span>
@@ -25,13 +30,11 @@ export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
             <li>
               <a
                 href="#home"
+                className={activeSection === "home" ? "active" : ""}
                 onClick={(e) => {
                   e.preventDefault();
-                  window.scrollTo({
-                    top: 0,
-                  });
+                  handleSectionScroll("home");
                 }}
-                className={activeSection === "home" ? "active" : ""}
               >
                 Home
               </a>
@@ -40,6 +43,10 @@ export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
               <a
                 href="#about"
                 className={activeSection === "about" ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionScroll("about");
+                }}
               >
                 Sobre
               </a>
@@ -48,6 +55,10 @@ export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
               <a
                 href="#projects"
                 className={activeSection === "projects" ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionScroll("projects");
+                }}
               >
                 Projetos
               </a>
@@ -56,6 +67,10 @@ export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
               <a
                 href="#certificates"
                 className={activeSection === "certificates" ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionScroll("certificates");
+                }}
               >
                 Certificados
               </a>
@@ -64,6 +79,10 @@ export function Header({ isMenuOpen, setIsMenuOpen, activeSection }) {
               <a
                 href="#contact"
                 className={activeSection === "contact" ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionScroll("contact");
+                }}
               >
                 Contato
               </a>

@@ -2,15 +2,13 @@ import { ArrowCircleUp } from "@phosphor-icons/react";
 
 import { Container } from "./styles";
 
-export function BackToTop() {
+export function BackToTop({ handleSectionScroll }) {
   return (
     <Container
       href="#home"
       onClick={(e) => {
         e.preventDefault();
-        window.scrollTo({
-          top: 0,
-        });
+        handleSectionScroll("home");
       }}
     >
       <ArrowCircleUp size={48} />
