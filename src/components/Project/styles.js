@@ -10,10 +10,6 @@ export const Container = styled.div`
   
   max-width: 40rem;
   padding: 3.2rem;
-
-  @media (min-width: 1024px) {
-    height: 52.288rem;
-  }
 `;
 
 export const Header = styled.div`
@@ -43,10 +39,6 @@ export const Preview = styled.div`
     &:hover {
       transform: scale(1.1);
     }
-  }
-
-  @media (min-width: 1024px) {
-    height: 23.589rem;
   }
 `;
 

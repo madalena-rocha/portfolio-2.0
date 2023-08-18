@@ -14,8 +14,4 @@ export const Container = styled.div`
     height: 100%;
     object-fit: cover;
   }
-
-  @media (min-width: 1024px) {
-    height: 28.298rem;
-  }
 `;

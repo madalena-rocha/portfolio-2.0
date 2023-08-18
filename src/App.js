@@ -43,7 +43,16 @@ export const Container = styled.div`
   }
 
   swiper-slide {
+    display: flex;
     max-width: 40rem;
+  }
+
+  #projects swiper-slide > div {
+    height: 53rem;
+  }
+
+  #certificates swiper-slide > div {
+    height: 29rem;
   }
   
   #contact > div {
