@@ -10,13 +10,16 @@ export function Footer() {
       </Copyright>
 
       <SocialMedia>
-        <a href="https://www.instagram.com/madalena.machado.rocha/">
+        <a
+          href="https://www.instagram.com/madalena.machado.rocha/"
+          target="_blank"
+        >
           <InstagramLogo size={24} />
         </a>
-        <a href="https://www.youtube.com/@madalenamachadorocha">
+        <a href="https://www.youtube.com/@madalenamachadorocha" target="_blank">
           <YoutubeLogo size={24} />
         </a>
-        <a href="https://twitter.com/MadalenaMRocha">
+        <a href="https://twitter.com/MadalenaMRocha" target="_blank">
           <TwitterLogo size={24} />
         </a>
       </SocialMedia>
