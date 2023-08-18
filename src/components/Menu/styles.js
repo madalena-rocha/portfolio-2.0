@@ -10,8 +10,8 @@ export const Container = styled.div`
   padding: 3.2rem 2.8rem;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
-  visibility: ${({ isMenuOpen }) => (isMenuOpen ? "visible" : "hidden")};
-  opacity: ${({ isMenuOpen }) => (isMenuOpen ? "1" : "0")};
+  visibility: ${props => props.isMenuOpen ? "visible" : "hidden"};
+  opacity: ${props => props.isMenuOpen ? "1" : "0"};
   transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
 
   > ul {

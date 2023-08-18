@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
-  grid-template-rows: 11.6rem auto 9.7rem;
+  grid-template-rows: 11.6rem auto 11.6rem;
   grid-template-areas:
     "header"
     "content"
@@ -13,6 +13,11 @@ export const Container = styled.div`
 
     width: 100vw;
     padding: 0 2.8rem;
+
+    @media (min-width: 1024px) {
+      width: 100%;
+      padding: 0 12.3rem;
+    }
   }
 
   #home {
@@ -23,6 +28,11 @@ export const Container = styled.div`
     gap: 3.2rem;
 
     text-align: center;
+    padding-top: 12.8rem;
+
+    > h2 {
+      display: none;
+    }
 
     @media (min-width: 1024px) {
       flex-direction: row;
@@ -30,16 +40,14 @@ export const Container = styled.div`
     }
   }
 
-  #home > h2 {
-    display: none;
-  }
+  #about {
+    p + p {
+      margin-top: 1.6rem;
+    }
 
-  #about p + p {
-    margin-top: 1.6rem;
-  }
-
-  #about p span {
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
+    p span {
+      color: ${({ theme }) => theme.COLORS.GRAY_200};
+    }
   }
 
   swiper-slide {
@@ -54,23 +62,20 @@ export const Container = styled.div`
   #certificates swiper-slide > div {
     height: 29rem;
   }
-  
-  #contact > div {
-    text-align: center;
-  }
 
-  #contact > div p {
-    font-size: 1.8rem;
-  }
+  #contact {
+    padding-bottom: 12.8rem;
 
-  #contact > div > div {
-    justify-content: center;
-  }
+    > div {
+      text-align: center;
 
-  @media (min-width: 1024px) {
-    > main {
-      width: 100%;
-      padding: 0 12.3rem;
+      p {
+        font-size: 1.8rem;
+      }
+
+      > div {
+        justify-content: center;
+      }
     }
   }
 `;

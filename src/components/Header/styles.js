@@ -45,13 +45,13 @@ export const Icon = styled.div`
     transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
 
     &:nth-child(1) {
-      visibility: ${({ isMenuOpen }) => (isMenuOpen ? "hidden" : "visible")};
-      opacity: ${({ isMenuOpen }) => (isMenuOpen ? "0" : "1")};
+      visibility: ${props => props.isMenuOpen ? "hidden" : "visible"};
+      opacity: ${props => props.isMenuOpen ? "0" : "1"};
     }
 
     &:nth-child(2) {
-      visibility: ${({ isMenuOpen }) => (isMenuOpen ? "visible" : "hidden")};
-      opacity: ${({ isMenuOpen }) => (isMenuOpen ? "1" : "0")};
+      visibility: ${props => props.isMenuOpen ? "visible" : "hidden"};
+      opacity: ${props => props.isMenuOpen ? "1" : "0"};
     }
   }
 `;

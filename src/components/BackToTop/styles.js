@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.a`
   display: flex;
   position: fixed;
-  bottom: 10.5rem;
+  bottom: 12.4rem;
   right: 2.8rem;
   z-index: 10;
 
