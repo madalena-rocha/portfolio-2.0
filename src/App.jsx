@@ -70,7 +70,7 @@ function App() {
       repo: "food-explorer-frontend",
       demo: "https://food-explorer-frontend-80e47f.netlify.app/",
       description: "Cardápio digital para um restaurante fictício.",
-      path: "https://imgur.com/SBK6HAH.png",
+      path: "https://imgur.com/uG6oBsH.png",
       tags: [
         "Axios",
         "Express.js",
@@ -86,7 +86,7 @@ function App() {
       repo: "rocket-movies",
       demo: "https://rocket-movies-app.netlify.app/",
       description: "Aplicação para acompanhar tudo que assistir.",
-      path: "https://imgur.com/gh3zApk.png",
+      path: "https://imgur.com/peBkUYE.png",
       tags: [
         "Axios",
         "Express.js",
@@ -102,7 +102,7 @@ function App() {
       repo: "rocket-notes",
       demo: "https://rocket-notes-app.netlify.app/",
       description: "Aplicação para salvar e gerenciar links úteis.",
-      path: "https://imgur.com/E2SLeUr.png",
+      path: "https://imgur.com/X5eRjMx.png",
       tags: [
         "Axios",
         "Express.js",
@@ -118,7 +118,7 @@ function App() {
       repo: "minicactus-games",
       demo: "https://www.minicactusgames.com/",
       description: "Site da Minicactus Games, um estúdio brasileiro de jogos.",
-      path: "https://imgur.com/q4puBF7.png",
+      path: "https://imgur.com/p533UtB.png",
       tags: ["HTML", "CSS", "JavaScript"],
     },
   ];
