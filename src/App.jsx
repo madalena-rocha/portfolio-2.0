@@ -247,7 +247,6 @@ function App() {
             autoplay="true"
             loop="true"
             grab-cursor="true"
-            pagination="true"
           >
             {projectsData.map((project, index) => (
               <swiper-slide key={index}>
