@@ -20,9 +20,17 @@ export function Header({
       </Brand>
 
       {!isDesktop ? (
-        <Icon isMenuOpen={isMenuOpen}>
-          <List size={24} onClick={() => setIsMenuOpen(true)} />
-          <X size={24} onClick={() => setIsMenuOpen(false)} />
+        <Icon>
+          <List
+            size={24}
+            className={isMenuOpen ? "hidden" : "visible"}
+            onClick={() => setIsMenuOpen(true)}
+          />
+          <X
+            size={24}
+            className={isMenuOpen ? "visible" : "hidden"}
+            onClick={() => setIsMenuOpen(false)}
+          />
         </Icon>
       ) : (
         <Navigation>

@@ -11,7 +11,7 @@ export function Menu({
   };
 
   return (
-    <Container isMenuOpen={isMenuOpen}>
+    <Container className={isMenuOpen ? 'visible' : 'hidden'}>
       <ul>
         <li>
           <a
