@@ -66,6 +66,17 @@ function App() {
 
   const projectsData = [
     {
+      title: "Marta Rocha",
+      repo: "marta-rocha",
+      demo: "https://martamachadorocha.netlify.app/",
+      description: "Portfólio da escritora Marta Machado Rocha.",
+      path: "https://imgur.com/MP2T9Zr.png",
+      tags: [
+        "ReactJS",
+        "Styled Components",
+      ],
+    },
+    {
       title: "Food Explorer",
       repo: "food-explorer-frontend",
       demo: "https://food-explorer-frontend-80e47f.netlify.app/",
@@ -124,6 +135,10 @@ function App() {
   ];
 
   const certificatesData = [
+    {
+      src: "https://imgur.com/DhlTAG1.png",
+      alt: "Certificado do evento IA para Devs da Rocketseat.",
+    },
     {
       src: "https://imgur.com/a7vUE7h.png",
       alt: "Certificado do programa Explorer da Rocketseat.",

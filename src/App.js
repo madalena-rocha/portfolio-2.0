@@ -16,7 +16,12 @@ export const Container = styled.div`
 
     @media (min-width: 1024px) {
       width: 100%;
+      max-width: 140rem;
+
+      margin-inline: auto;
       padding: 0 12.3rem;
+
+      overflow-x: hidden;
     }
   }
 
