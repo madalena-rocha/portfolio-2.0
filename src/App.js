@@ -90,7 +90,7 @@ export const Profile = styled.div`
     object-fit: cover;
     
     padding: 3.7px;
-    border: 4px solid ${({ theme }) => theme.COLORS.PINK};
+    border: 4px solid ${({ theme }) => theme.COLORS.BRAND};
     border-radius: 50%;
   }
 `;
@@ -100,7 +100,7 @@ export const Presentation = styled.div`
     font-size: 3.4rem;
 
     span {
-      color: ${({ theme }) => theme.COLORS.PINK};
+      color: ${({ theme }) => theme.COLORS.BRAND};
     }
   }
 `;

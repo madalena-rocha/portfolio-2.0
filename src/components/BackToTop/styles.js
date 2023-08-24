@@ -7,7 +7,7 @@ export const Container = styled.a`
   right: 2.8rem;
   z-index: 10;
 
-  color: ${({ theme }) => theme.COLORS.PINK};
+  color: ${({ theme }) => theme.COLORS.BRAND};
 
   @media (min-width: 1024px) {
     right: 12.3rem;

@@ -5,7 +5,7 @@ export const Container = styled.span`
   padding: 0.6rem 1.6rem;
   border-radius: 0.8rem;
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   transition: transform 0.5s;
 
   &:hover {

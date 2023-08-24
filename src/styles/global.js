@@ -19,7 +19,7 @@ export default createGlobalStyle`
     font-family: 'Inter', sans-serif;
 	  font-size: 1.6rem;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
     color: ${({ theme }) => theme.COLORS.WHITE};
 		-webkit-font-smoothing: antialiased;
   }
@@ -29,7 +29,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.PINK};
+    background-color: ${({ theme }) => theme.COLORS.BRAND};
     border-radius: 0.8rem;
   }
 

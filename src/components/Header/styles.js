@@ -11,7 +11,7 @@ export const Container = styled.header`
   justify-content: space-between;
   gap: 3.2rem;
   
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_200};
   padding: 0 2.8rem;
 
@@ -25,7 +25,7 @@ export const Container = styled.header`
 
 export const Brand = styled.div`
   > h2 {
-    color: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.BRAND};
 
     span {
       white-space: nowrap;

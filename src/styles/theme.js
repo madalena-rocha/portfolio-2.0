@@ -1,11 +1,11 @@
 export default {
   COLORS: {
-    BACKGROUND_900: "#1a1a1a",
-    BACKGROUND_800: "#242424",
+    BACKGROUND_900: "#121214",
+    BACKGROUND_800: "#202024",
 
-    WHITE: "rgba(255, 255, 255, 0.87)",
-    PINK: "#FF859B",
+    WHITE: "#E1E1E6",
+    BRAND: "#7ECCBB",
     
-    GRAY_200: "#888",
+    GRAY_200: "#8D8D99",
   },
 };

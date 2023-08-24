@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   margin-top: 11.6rem;
   padding: 3.2rem 2.8rem;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
   &.visible {
     visibility: visible;
