@@ -17,7 +17,7 @@
 
 <h2 id="project">📁 Projeto</h2>
 
-O projeto compreende a criação do meu portfólio como desenvolvedora. Nele, faço uma apresentação pessoal, compartilho insights sobre minha trajetória, destaco as tecnologias que domino, exibo os principais projetos que desenvolvi, apresento os certificados de cursos que completei e disponibilizo minhas informações de contato.
+O projeto compreende a criação do meu portfólio como desenvolvedora. Nele, faço uma apresentação pessoal, compartilho insights sobre minha trajetória, destaco as tecnologias que utilizo, exibo os principais projetos que desenvolvi, apresento os certificados de cursos que completei e disponibilizo minhas informações de contato.
 
 !["Portfólio"](./src/assets/portfolio.png)
 
@@ -29,6 +29,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - ReactDOM
 - Phosphor Icons
 - React Responsive
+- React Scroll
 - Styled Components
 - SwiperJS
 - ViteJS
