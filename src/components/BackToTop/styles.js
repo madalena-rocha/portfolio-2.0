@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.a`
+export const Container = styled.div`
   display: flex;
   position: fixed;
   bottom: 12.4rem;

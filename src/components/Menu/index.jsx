@@ -1,82 +1,80 @@
+import { Link } from "react-scroll";
+
 import { Container } from "./styles";
 
-export function Menu({
-  isMenuOpen,
-  setIsMenuOpen,
-  activeSection,
-  handleSectionScroll,
-}) {
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
-  };
-
+export function Menu({ isMenuOpen, setIsMenuOpen }) {
   return (
-    <Container className={isMenuOpen ? 'visible' : 'hidden'}>
+    <Container className={isMenuOpen ? "visible" : "hidden"}>
       <ul>
         <li>
-          <a
-            href="#home"
-            className={activeSection === "home" ? "active" : ""}
+          <Link
+            to="home"
             onClick={(e) => {
-              e.preventDefault();
-              handleSectionScroll("home");
-              handleLinkClick();
+              setIsMenuOpen(false);
             }}
+            spy={true}
+            smooth={true}
+            offset={-116}
+            duration={500}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#about"
-            className={activeSection === "about" ? "active" : ""}
+          <Link
+            to="about"
             onClick={(e) => {
-              e.preventDefault();
-              handleSectionScroll("about");
-              handleLinkClick();
+              setIsMenuOpen(false);
             }}
+            spy={true}
+            smooth={true}
+            offset={-116}
+            duration={500}
           >
             Sobre
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#projects"
-            className={activeSection === "projects" ? "active" : ""}
+          <Link
+            to="projects"
             onClick={(e) => {
-              e.preventDefault();
-              handleSectionScroll("projects");
-              handleLinkClick();
+              setIsMenuOpen(false);
             }}
+            spy={true}
+            smooth={true}
+            offset={-116}
+            duration={500}
           >
             Projetos
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#certificates"
-            className={activeSection === "certificates" ? "active" : ""}
+          <Link
+            to="certificates"
             onClick={(e) => {
-              e.preventDefault();
-              handleSectionScroll("certificates");
-              handleLinkClick();
+              setIsMenuOpen(false);
             }}
+            spy={true}
+            smooth={true}
+            offset={-116}
+            duration={500}
           >
             Certificados
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#contact"
-            className={activeSection === "contact" ? "active" : ""}
+          <Link
+            to="contact"
             onClick={(e) => {
-              e.preventDefault();
-              handleSectionScroll("contact");
-              handleLinkClick();
+              setIsMenuOpen(false);
             }}
+            spy={true}
+            smooth={true}
+            offset={-116}
+            duration={500}
           >
             Contato
-          </a>
+          </Link>
         </li>
       </ul>
     </Container>

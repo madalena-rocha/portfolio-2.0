@@ -1,14 +1,10 @@
 import { List, X } from "@phosphor-icons/react";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-scroll";
 
 import { Container, Brand, Icon, Navigation } from "./styles";
 
-export function Header({
-  isMenuOpen,
-  setIsMenuOpen,
-  activeSection,
-  handleSectionScroll,
-}) {
+export function Header({ isMenuOpen, setIsMenuOpen }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
@@ -36,64 +32,59 @@ export function Header({
         <Navigation>
           <ul>
             <li>
-              <a
-                href="#home"
-                className={activeSection === "home" ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSectionScroll("home");
-                }}
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-116}
+                duration={500}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#about"
-                className={activeSection === "about" ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSectionScroll("about");
-                }}
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-116}
+                duration={500}
               >
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#projects"
-                className={activeSection === "projects" ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSectionScroll("projects");
-                }}
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-116}
+                duration={500}
               >
                 Projetos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#certificates"
-                className={activeSection === "certificates" ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSectionScroll("certificates");
-                }}
+              <Link
+                to="certificates"
+                spy={true}
+                smooth={true}
+                offset={-116}
+                duration={500}
               >
                 Certificados
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                className={activeSection === "contact" ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSectionScroll("contact");
-                }}
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-116}
+                duration={500}
               >
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </Navigation>

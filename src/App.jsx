@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { Element } from "react-scroll";
 
 import {
   LinkedinLogo,
@@ -27,14 +28,6 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-
-  function handleSectionScroll(sectionId) {
-    const headerHeight = document.getElementById("header").offsetHeight;
-    const section = document.getElementById(sectionId);
-    const offsetTop = section.offsetTop - headerHeight;
-    window.scrollTo({ top: offsetTop });
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,11 +63,8 @@ function App() {
       repo: "marta-rocha",
       demo: "https://martamachadorocha.netlify.app/",
       description: "Portfólio da escritora Marta Machado Rocha.",
-      path: "https://imgur.com/MP2T9Zr.png",
-      tags: [
-        "ReactJS",
-        "Styled Components",
-      ],
+      path: "https://imgur.com/HrAc462.png",
+      tags: ["ReactJS", "Styled Components"],
     },
     {
       title: "Food Explorer",
@@ -179,150 +169,138 @@ function App() {
 
   return (
     <Container>
-      <Header
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        activeSection={activeSection}
-        handleSectionScroll={handleSectionScroll}
-      />
+      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       {!isDesktop && (
-        <Menu
-          isMenuOpen={isMenuOpen}
-          setIsMenuOpen={setIsMenuOpen}
-          activeSection={activeSection}
-          handleSectionScroll={handleSectionScroll}
-        />
+        <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       )}
 
       <main>
-        <Section id="home" title="" setActiveSection={setActiveSection}>
-          <Profile>
-            <img
-              src="https://github.com/madalena-rocha.png"
-              alt="Mulher de pele parda e cabelos castanhos lisos, usando uma camiseta preta e sorrindo."
-            />
-          </Profile>
+        <Element name="home">
+          <Section id="home" title="">
+            <Profile>
+              <img
+                src="https://github.com/madalena-rocha.png"
+                alt="Mulher de pele parda e cabelos castanhos lisos, usando uma camiseta preta e sorrindo."
+              />
+            </Profile>
 
-          <Presentation>
-            <h1>
-              Olá! Sou <span>Madalena</span>, <br></br> Desenvolvedora
-              Front-end.
-            </h1>
+            <Presentation>
+              <h1>
+                Olá! Sou <span>Madalena</span>, <br></br> Desenvolvedora
+                Front-end.
+              </h1>
 
-            <Links>
-              <Link
-                href="https://www.linkedin.com/in/madalena-machado-rocha/"
-                title="LinkedIn"
-              >
-                <LinkedinLogo size={24} />
-              </Link>
+              <Links>
+                <Link
+                  href="https://www.linkedin.com/in/madalena-machado-rocha/"
+                  title="LinkedIn"
+                >
+                  <LinkedinLogo size={24} />
+                </Link>
 
-              <Link href="https://github.com/madalena-rocha" title="GitHub">
-                <GithubLogo size={24} />
-              </Link>
-            </Links>
-          </Presentation>
-        </Section>
+                <Link href="https://github.com/madalena-rocha" title="GitHub">
+                  <GithubLogo size={24} />
+                </Link>
+              </Links>
+            </Presentation>
+          </Section>
+        </Element>
 
-        <Section id="about" title="Sobre" setActiveSection={setActiveSection}>
-          <p>
-            Sou uma Engenheira Mecânica que se apaixonou pelo mundo do
-            Desenvolvimento Front-end.
-          </p>
-          <p>
-            Com habilidades em <span>JavaScript</span> e <span>ReactJS</span>,
-            tenho trabalhado incansavelmente para me aprimorar, inclusive
-            através de cursos na Rocketseat e na Digital House, onde tive a
-            oportunidade de aprender com mentores incríveis e construir projetos
-            desafiadores.
-          </p>
-          <p>
-            Agora, estou em busca de uma oportunidade como Desenvolvedora
-            Front-end, onde possa contribuir com minhas habilidades e
-            conhecimentos para projetos que possam impactar positivamente as
-            pessoas.
-          </p>
+        <Element name="about">
+          <Section id="about" title="Sobre">
+            <p>
+              Sou uma Engenheira Mecânica que se apaixonou pelo mundo do
+              Desenvolvimento Front-end.
+            </p>
+            <p>
+              Com habilidades em <span>JavaScript</span> e <span>ReactJS</span>,
+              tenho trabalhado incansavelmente para me aprimorar, inclusive
+              através de cursos na Rocketseat e na Digital House, onde tive a
+              oportunidade de aprender com mentores incríveis e construir
+              projetos desafiadores.
+            </p>
+            <p>
+              Agora, estou em busca de uma oportunidade como Desenvolvedora
+              Front-end, onde possa contribuir com minhas habilidades e
+              conhecimentos para projetos que possam impactar positivamente as
+              pessoas.
+            </p>
 
-          <Skills>
-            {skillsData.map((skill, index) => (
-              <Skill key={index} icon={skill.icon} title={skill.title} />
-            ))}
-          </Skills>
-        </Section>
+            <Skills>
+              {skillsData.map((skill, index) => (
+                <Skill key={index} icon={skill.icon} title={skill.title} />
+              ))}
+            </Skills>
+          </Section>
+        </Element>
 
-        <Section
-          id="projects"
-          title="Projetos"
-          setActiveSection={setActiveSection}
-        >
-          <swiper-container
-            space-between="32"
-            slides-per-view="auto"
-            autoplay="true"
-            loop="true"
-            grab-cursor="true"
-          >
-            {projectsData.map((project, index) => (
-              <swiper-slide key={index}>
-                <Project
-                  title={project.title}
-                  repo={project.repo}
-                  demo={project.demo}
-                  description={project.description}
-                  path={project.path}
-                  tags={project.tags}
-                />
-              </swiper-slide>
-            ))}
-          </swiper-container>
-        </Section>
+        <Element name="projects">
+          <Section id="projects" title="Projetos">
+            <swiper-container
+              space-between="32"
+              slides-per-view="auto"
+              autoplay="true"
+              loop="true"
+              grab-cursor="true"
+            >
+              {projectsData.map((project, index) => (
+                <swiper-slide key={index}>
+                  <Project
+                    title={project.title}
+                    repo={project.repo}
+                    demo={project.demo}
+                    description={project.description}
+                    path={project.path}
+                    tags={project.tags}
+                  />
+                </swiper-slide>
+              ))}
+            </swiper-container>
+          </Section>
+        </Element>
 
-        <Section
-          id="certificates"
-          title="Certificados"
-          setActiveSection={setActiveSection}
-        >
-          <swiper-container
-            space-between="32"
-            slides-per-view="auto"
-            autoplay="true"
-            loop="true"
-            grab-cursor="true"
-          >
-            {certificatesData.map((certificate, index) => (
-              <swiper-slide key={index}>
-                <Certificate src={certificate.src} alt={certificate.alt} />
-              </swiper-slide>
-            ))}
-          </swiper-container>
-        </Section>
+        <Element name="certificates">
+          <Section id="certificates" title="Certificados">
+            <swiper-container
+              space-between="32"
+              slides-per-view="auto"
+              autoplay="true"
+              loop="true"
+              grab-cursor="true"
+            >
+              {certificatesData.map((certificate, index) => (
+                <swiper-slide key={index}>
+                  <Certificate src={certificate.src} alt={certificate.alt} />
+                </swiper-slide>
+              ))}
+            </swiper-container>
+          </Section>
+        </Element>
 
-        <Section
-          id="contact"
-          title="Contato"
-          setActiveSection={setActiveSection}
-        >
-          <div>
-            <p>Vamos construir algo juntos?</p>
+        <Element name="contact">
+          <Section id="contact" title="Contato">
+            <div>
+              <p>Vamos construir algo juntos?</p>
 
-            <Links>
-              <Link href="mailto:rochamada1997m@gmail.com" title="E-mail">
-                <Envelope size={24} />
-              </Link>
+              <Links>
+                <Link href="mailto:rochamada1997m@gmail.com" title="E-mail">
+                  <Envelope size={24} />
+                </Link>
 
-              <Link
-                href="http://discordapp.com/users/827312692905377802"
-                title="Discord"
-              >
-                <DiscordLogo size={24} />
-              </Link>
-            </Links>
-          </div>
-        </Section>
+                <Link
+                  href="http://discordapp.com/users/827312692905377802"
+                  title="Discord"
+                >
+                  <DiscordLogo size={24} />
+                </Link>
+              </Links>
+            </div>
+          </Section>
+        </Element>
       </main>
 
-      {showBackToTop && <BackToTop handleSectionScroll={handleSectionScroll} />}
+      {showBackToTop && <BackToTop />}
 
       <Footer />
     </Container>
