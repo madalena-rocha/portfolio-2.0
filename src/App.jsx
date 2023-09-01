@@ -126,6 +126,10 @@ function App() {
 
   const certificatesData = [
     {
+      src: "https://imgur.com/QHZO5Av.png",
+      alt: "Certificado do evento 'Programaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
+    },
+    {
       src: "https://imgur.com/DhlTAG1.png",
       alt: "Certificado do evento IA para Devs da Rocketseat.",
     },
