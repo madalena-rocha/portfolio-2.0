@@ -126,6 +126,10 @@ function App() {
 
   const certificatesData = [
     {
+      src: "https://imgur.com/iPEIyv9.png",
+      alt: "Certificado da Masterclass Foco Node.js da Rocketseat.",
+    },
+    {
       src: "https://imgur.com/QHZO5Av.png",
       alt: "Certificado do evento 'Programaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
     },
