@@ -45,20 +45,22 @@ function App() {
   }, []);
 
   const skillsData = [
-    { icon: "html", title: "HTML" },
-    { icon: "css", title: "CSS" },
-    { icon: "javascript", title: "JavaScript" },
-    { icon: "git", title: "Git" },
-    { icon: "react", title: "ReactJS" },
-    { icon: "styledcomponents", title: "Styled Components" },
-    { icon: "figma", title: "Figma" },
-    { icon: "nodejs", title: "Node.js" },
-    { icon: "sqlite", title: "SQLite" },
-    { icon: "express", title: "Express.js" },
+    { id: "1", icon: "html", title: "HTML" },
+    { id: "2", icon: "css", title: "CSS" },
+    { id: "3", icon: "javascript", title: "JavaScript" },
+    { id: "4", icon: "git", title: "Git" },
+    { id: "5", icon: "react", title: "ReactJS" },
+    { id: "6", icon: "styledcomponents", title: "Styled Components" },
+    { id: "7", icon: "ts", title: "TypeScript" },
+    { id: "8", icon: "figma", title: "Figma" },
+    { id: "9", icon: "nodejs", title: "Node.js" },
+    { id: "10", icon: "sqlite", title: "SQLite" },
+    { id: "11", icon: "express", title: "Express.js" },
   ];
 
   const projectsData = [
     {
+      id: "5",
       title: "Marta Rocha",
       repo: "marta-rocha",
       demo: "https://martamachadorocha.netlify.app/",
@@ -67,6 +69,7 @@ function App() {
       tags: ["ReactJS", "Styled Components"],
     },
     {
+      id: "4",
       title: "Food Explorer",
       repo: "food-explorer-frontend",
       demo: "https://food-explorer-frontend-80e47f.netlify.app/",
@@ -83,6 +86,7 @@ function App() {
       ],
     },
     {
+      id: "3",
       title: "Rocket Movies",
       repo: "rocket-movies",
       demo: "https://rocket-movies-app.netlify.app/",
@@ -99,6 +103,7 @@ function App() {
       ],
     },
     {
+      id: "2",
       title: "Rocket Notes",
       repo: "rocket-notes",
       demo: "https://rocket-notes-app.netlify.app/",
@@ -115,6 +120,7 @@ function App() {
       ],
     },
     {
+      id: "1",
       title: "Minicactus Games",
       repo: "minicactus-games",
       demo: "https://www.minicactusgames.com/",
@@ -126,50 +132,62 @@ function App() {
 
   const certificatesData = [
     {
+      id: "12",
       src: "https://imgur.com/iPEIyv9.png",
       alt: "Certificado da Masterclass Foco Node.js da Rocketseat.",
     },
     {
+      id: "11",
       src: "https://imgur.com/QHZO5Av.png",
       alt: "Certificado do evento 'Programaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
     },
     {
+      id: "10",
       src: "https://imgur.com/DhlTAG1.png",
       alt: "Certificado do evento IA para Devs da Rocketseat.",
     },
     {
+      id: "9",
       src: "https://imgur.com/a7vUE7h.png",
       alt: "Certificado do programa Explorer da Rocketseat.",
     },
     {
+      id: "8",
       src: "https://imgur.com/C5JAJyX.png",
       alt: "Certificado da Codecon Digital 2023.",
     },
     {
+      id: "7",
       src: "https://imgur.com/Pmjinm4.png",
       alt: "Certificado da capacitação Adas da SCM (Se Candidate, Mulher!) Academy.",
     },
     {
+      id: "6",
       src: "https://imgur.com/o4LEUTB.png",
       alt: "Certificado do Hackathon #01 da Orange Juice.",
     },
     {
+      id: "5",
       src: "https://imgur.com/3TrfYSP.png",
       alt: "Certificado da Masterclass Foco React da Rocketseat.",
     },
     {
+      id: "4",
       src: "https://imgur.com/vVoOYgO.png",
       alt: "Certificado do curso Desenvolvimento Web Front End Node da Digital House.",
     },
     {
+      id: "3",
       src: "https://imgur.com/1YmADpf.png",
       alt: "Certificado da Trilha Especializar do Discover da Rocketseat.",
     },
     {
+      id: "2",
       src: "https://imgur.com/HwCfb8y.png",
       alt: "Certificado da Trilha Fundamentar do Discover da Rocketseat.",
     },
     {
+      id: "1",
       src: "https://imgur.com/5IUY5BG.png",
       alt: "Certificado da Trilha Conectar do Discover da Rocketseat.",
     },
@@ -236,8 +254,8 @@ function App() {
             </p>
 
             <Skills>
-              {skillsData.map((skill, index) => (
-                <Skill key={index} icon={skill.icon} title={skill.title} />
+              {skillsData.map((skill, id) => (
+                <Skill key={id} icon={skill.icon} title={skill.title} />
               ))}
             </Skills>
           </Section>
@@ -252,8 +270,8 @@ function App() {
               loop="true"
               grab-cursor="true"
             >
-              {projectsData.map((project, index) => (
-                <swiper-slide key={index}>
+              {projectsData.map((project, id) => (
+                <swiper-slide key={id}>
                   <Project
                     title={project.title}
                     repo={project.repo}
@@ -277,8 +295,8 @@ function App() {
               loop="true"
               grab-cursor="true"
             >
-              {certificatesData.map((certificate, index) => (
-                <swiper-slide key={index}>
+              {certificatesData.map((certificate, id) => (
+                <swiper-slide key={id}>
                   <Certificate src={certificate.src} alt={certificate.alt} />
                 </swiper-slide>
               ))}
