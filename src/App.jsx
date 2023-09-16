@@ -132,6 +132,11 @@ function App() {
 
   const certificatesData = [
     {
+      id: "13",
+      src: "https://imgur.com/sQGhQ7W.png",
+      alt: "Certificado da NLW IA da Rocketseat.",
+    },
+    {
       id: "12",
       src: "https://imgur.com/iPEIyv9.png",
       alt: "Certificado da Masterclass Foco Node.js da Rocketseat.",
