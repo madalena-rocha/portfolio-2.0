@@ -132,6 +132,11 @@ function App() {
 
   const certificatesData = [
     {
+      id: "14",
+      src: "https://imgur.com/1XnUntx.png",
+      alt: "Certificado do evento 'PrograMaria Summit 2023' da PrograMaria.",
+    },
+    {
       id: "13",
       src: "https://imgur.com/sQGhQ7W.png",
       alt: "Certificado da NLW IA da Rocketseat.",
@@ -144,7 +149,7 @@ function App() {
     {
       id: "11",
       src: "https://imgur.com/QHZO5Av.png",
-      alt: "Certificado do evento 'Programaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
+      alt: "Certificado do evento 'PrograMaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
     },
     {
       id: "10",
