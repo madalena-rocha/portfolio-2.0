@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <Container>
       <Copyright>
-        <p>© 2023 Madalena Rocha</p>
+        <p>© {new Date().getFullYear()} Madalena Rocha</p>
         <p>Todos os direitos reservados.</p>
       </Copyright>
 
