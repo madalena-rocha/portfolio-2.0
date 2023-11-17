@@ -61,8 +61,8 @@ function App() {
   const projectsData = [
     {
       id: "5",
-      title: "Marta Rocha",
-      repo: "marta-rocha",
+      title: "Writer Portfolio",
+      repo: "writer-portfolio",
       demo: "https://martamachadorocha.netlify.app/",
       description: "Portfólio da escritora Marta Machado Rocha.",
       path: "https://imgur.com/HrAc462.png",
@@ -122,11 +122,11 @@ function App() {
     {
       id: "1",
       title: "Minicactus Games",
-      repo: "minicactus-games",
+      repo: "minicactus-games-2.0",
       demo: "https://www.minicactusgames.com/",
       description: "Site da Minicactus Games, um estúdio brasileiro de jogos.",
       path: "https://imgur.com/p533UtB.png",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: ["HTML", "CSS", "JavaScript", "ReactJS"],
     },
   ];
 

@@ -1,5 +1,5 @@
 <h1 align="center" style="text-align: center;">
-  👩🏽‍💻 Portfólio Dev
+  👩🏽‍💻 Portfólio
 </h1>
 
 > Meu portfólio de desenvolvedora
