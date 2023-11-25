@@ -246,21 +246,21 @@ function App() {
         <Element name="about">
           <Section id="about" title="Sobre">
             <p>
-              Sou uma Engenheira Mecânica que se apaixonou pelo mundo do
-              Desenvolvimento Front-end.
+              Sou uma Engenheira Mecânica com mestrado em Ciência dos Materiais
+              e formação complementar em programação, atuando no{" "}
+              <span>Desenvolvimento Front-end</span>.
             </p>
             <p>
-              Com habilidades em <span>JavaScript</span> e <span>ReactJS</span>,
-              tenho trabalhado incansavelmente para me aprimorar, inclusive
-              através de cursos na Rocketseat e na Digital House, onde tive a
-              oportunidade de aprender com mentores incríveis e construir
-              projetos desafiadores.
+              Tenho experiência como Desenvolvedora Front-end Freelancer na{" "}
+              <span>Minicactus Games</span>, onde desenvolvi e mantenho o site
+              da empresa. Também faço parte do <span>Space Squad</span>, uma
+              comunidade de tecnologia da Rocketseat, onde compartilho
+              conhecimentos e aprendo com outros desenvolvedores.
             </p>
             <p>
-              Agora, estou em busca de uma oportunidade como Desenvolvedora
-              Front-end, onde possa contribuir com minhas habilidades e
-              conhecimentos para projetos que possam impactar positivamente as
-              pessoas.
+              Meu objetivo é trabalhar como{" "}
+              <span>Desenvolvedora Front-end</span>, colaborando em projetos que
+              façam a diferença na vida das pessoas.
             </p>
 
             <Skills>
