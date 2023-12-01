@@ -132,6 +132,11 @@ function App() {
 
   const certificatesData = [
     {
+      id: "15",
+      src: "https://imgur.com/oXuBNke.png",
+      alt: "Certificado da 3ª edição do Hackathon das Manas.",
+    },
+    {
       id: "14",
       src: "https://imgur.com/1XnUntx.png",
       alt: "Certificado do evento 'PrograMaria Summit 2023' da PrograMaria.",
