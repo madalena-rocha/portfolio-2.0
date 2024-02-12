@@ -132,6 +132,11 @@ function App() {
 
   const certificatesData = [
     {
+      id: "16",
+      src: "https://imgur.com/9u2hEVI.png",
+      alt: "Certificado da NLW Expert da Rocketseat.",
+    },
+    {
       id: "15",
       src: "https://imgur.com/oXuBNke.png",
       alt: "Certificado da 3ª edição do Hackathon das Manas.",
