@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Element } from "react-scroll";
+import { v4 as uuidv4 } from "uuid";
 
 import {
   LinkedinLogo,
@@ -45,22 +46,22 @@ function App() {
   }, []);
 
   const skillsData = [
-    { id: "1", icon: "html", title: "HTML" },
-    { id: "2", icon: "css", title: "CSS" },
-    { id: "3", icon: "javascript", title: "JavaScript" },
-    { id: "4", icon: "git", title: "Git" },
-    { id: "5", icon: "react", title: "ReactJS" },
-    { id: "6", icon: "styledcomponents", title: "Styled Components" },
-    { id: "7", icon: "ts", title: "TypeScript" },
-    { id: "8", icon: "figma", title: "Figma" },
-    { id: "9", icon: "nodejs", title: "Node.js" },
-    { id: "10", icon: "sqlite", title: "SQLite" },
-    { id: "11", icon: "express", title: "Express.js" },
+    { id: uuidv4(), icon: "html", title: "HTML" },
+    { id: uuidv4(), icon: "css", title: "CSS" },
+    { id: uuidv4(), icon: "javascript", title: "JavaScript" },
+    { id: uuidv4(), icon: "git", title: "Git" },
+    { id: uuidv4(), icon: "react", title: "ReactJS" },
+    { id: uuidv4(), icon: "styledcomponents", title: "Styled Components" },
+    { id: uuidv4(), icon: "ts", title: "TypeScript" },
+    { id: uuidv4(), icon: "figma", title: "Figma" },
+    { id: uuidv4(), icon: "nodejs", title: "Node.js" },
+    { id: uuidv4(), icon: "sqlite", title: "SQLite" },
+    { id: uuidv4(), icon: "express", title: "Express.js" },
   ];
 
   const projectsData = [
     {
-      id: "5",
+      id: uuidv4(),
       title: "Writer Portfolio",
       repo: "writer-portfolio",
       demo: "https://martamachadorocha.netlify.app/",
@@ -69,7 +70,7 @@ function App() {
       tags: ["ReactJS", "Styled Components"],
     },
     {
-      id: "4",
+      id: uuidv4(),
       title: "Food Explorer",
       repo: "food-explorer-frontend",
       demo: "https://food-explorer-frontend-80e47f.netlify.app/",
@@ -86,7 +87,7 @@ function App() {
       ],
     },
     {
-      id: "3",
+      id: uuidv4(),
       title: "Rocket Movies",
       repo: "rocket-movies",
       demo: "https://rocket-movies-app.netlify.app/",
@@ -103,7 +104,7 @@ function App() {
       ],
     },
     {
-      id: "2",
+      id: uuidv4(),
       title: "Rocket Notes",
       repo: "rocket-notes",
       demo: "https://rocket-notes-app.netlify.app/",
@@ -120,7 +121,7 @@ function App() {
       ],
     },
     {
-      id: "1",
+      id: uuidv4(),
       title: "Minicactus Games",
       repo: "minicactus-games-2.0",
       demo: "https://www.minicactusgames.com/",
@@ -132,87 +133,87 @@ function App() {
 
   const certificatesData = [
     {
-      id: "17",
+      id: uuidv4(),
       src: "https://imgur.com/ZZmTtZr.png",
       alt: "Certificado do curso Acessibilidade com ReactJS da Rocketseat.",
     },
     {
-      id: "16",
+      id: uuidv4(),
       src: "https://imgur.com/9u2hEVI.png",
       alt: "Certificado da NLW Expert da Rocketseat.",
     },
     {
-      id: "15",
+      id: uuidv4(),
       src: "https://imgur.com/oXuBNke.png",
       alt: "Certificado da 3ª edição do Hackathon das Manas.",
     },
     {
-      id: "14",
+      id: uuidv4(),
       src: "https://imgur.com/1XnUntx.png",
       alt: "Certificado do evento 'PrograMaria Summit 2023' da PrograMaria.",
     },
     {
-      id: "13",
+      id: uuidv4(),
       src: "https://imgur.com/sQGhQ7W.png",
       alt: "Certificado da NLW IA da Rocketseat.",
     },
     {
-      id: "12",
+      id: uuidv4(),
       src: "https://imgur.com/iPEIyv9.png",
       alt: "Certificado da Masterclass Foco Node.js da Rocketseat.",
     },
     {
-      id: "11",
+      id: uuidv4(),
       src: "https://imgur.com/QHZO5Av.png",
       alt: "Certificado do evento 'PrograMaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
     },
     {
-      id: "10",
+      id: uuidv4(),
       src: "https://imgur.com/DhlTAG1.png",
       alt: "Certificado do evento IA para Devs da Rocketseat.",
     },
     {
-      id: "9",
+      id: uuidv4(),
       src: "https://imgur.com/a7vUE7h.png",
       alt: "Certificado do programa Explorer da Rocketseat.",
     },
     {
-      id: "8",
+      id: uuidv4(),
       src: "https://imgur.com/C5JAJyX.png",
       alt: "Certificado da Codecon Digital 2023.",
     },
     {
-      id: "7",
+      id: uuidv4(),
       src: "https://imgur.com/Pmjinm4.png",
       alt: "Certificado da capacitação Adas da SCM (Se Candidate, Mulher!) Academy.",
     },
     {
-      id: "6",
+      id: uuidv4(),
       src: "https://imgur.com/o4LEUTB.png",
       alt: "Certificado do Hackathon #01 da Orange Juice.",
     },
     {
-      id: "5",
+      id: uuidv4(),
       src: "https://imgur.com/3TrfYSP.png",
       alt: "Certificado da Masterclass Foco React da Rocketseat.",
     },
     {
-      id: "4",
+      id: uuidv4(),
       src: "https://imgur.com/vVoOYgO.png",
       alt: "Certificado do curso Desenvolvimento Web Front End Node da Digital House.",
     },
     {
-      id: "3",
+      id: uuidv4(),
       src: "https://imgur.com/1YmADpf.png",
       alt: "Certificado da Trilha Especializar do Discover da Rocketseat.",
     },
     {
-      id: "2",
+      id: uuidv4(),
       src: "https://imgur.com/HwCfb8y.png",
       alt: "Certificado da Trilha Fundamentar do Discover da Rocketseat.",
     },
     {
-      id: "1",
+      id: uuidv4(),
       src: "https://imgur.com/5IUY5BG.png",
       alt: "Certificado da Trilha Conectar do Discover da Rocketseat.",
     },

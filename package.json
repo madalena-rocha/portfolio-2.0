@@ -16,7 +16,8 @@
     "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
     "styled-components": "^6.0.7",
-    "swiper": "^10.0.4"
+    "swiper": "^10.0.4",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
