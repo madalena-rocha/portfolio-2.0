@@ -126,7 +126,7 @@ function App() {
       repo: "minicactus-games-2.0",
       demo: "https://www.minicactusgames.com/",
       description: "Site da Minicactus Games, um estúdio brasileiro de jogos.",
-      path: "https://imgur.com/p533UtB.png",
+      path: "https://imgur.com/cPIUMx9.png",
       tags: ["HTML", "CSS", "JavaScript", "ReactJS"],
     },
   ];
