@@ -1,9 +1,15 @@
 import { Container } from "./styles";
 
-export function Certificate({ src, alt }) {
+export function Certificate({ href, src, alt }) {
   return (
     <Container>
-      <img src={src} alt={alt} />
+      <a
+        href={href ? href : src}
+        target="_blank"
+        title="Visualizar"
+      >
+        <img src={src} alt={alt} />
+      </a>
     </Container>
   );
 }

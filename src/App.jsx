@@ -53,10 +53,10 @@ function App() {
     { id: uuidv4(), icon: "react", title: "ReactJS" },
     { id: uuidv4(), icon: "styledcomponents", title: "Styled Components" },
     { id: uuidv4(), icon: "ts", title: "TypeScript" },
+    { id: uuidv4(), icon: "tailwind", title: "TailwindCSS" },
     { id: uuidv4(), icon: "figma", title: "Figma" },
     { id: uuidv4(), icon: "nodejs", title: "Node.js" },
     { id: uuidv4(), icon: "sqlite", title: "SQLite" },
-    { id: uuidv4(), icon: "express", title: "Express.js" },
   ];
 
   const projectsData = [
@@ -134,91 +134,109 @@ function App() {
   const certificatesData = [
     {
       id: uuidv4(),
-      src: "https://imgur.com/GuHrvla.png",
+      href: "https://app.rocketseat.com.br/certificates/4fb80053-634e-4609-9f96-5142c753a4d3",
+      src: "https://imgur.com/MWo9s5G.png",
       alt: "Certificado da NLW Unite da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/33667c89-d16c-434f-b4fb-5bfe5f602098",
       src: "https://imgur.com/ZZmTtZr.png",
       alt: "Certificado do curso Acessibilidade com ReactJS da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/4aa9b78d-3130-459d-8e6c-92b7446bd954",
       src: "https://imgur.com/9u2hEVI.png",
       alt: "Certificado da NLW Expert da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/oXuBNke.png",
       alt: "Certificado da 3ª edição do Hackathon das Manas.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/1XnUntx.png",
       alt: "Certificado do evento 'PrograMaria Summit 2023' da PrograMaria.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/ac57b47d-596c-4757-9bc0-11ac95300109",
       src: "https://imgur.com/sQGhQ7W.png",
       alt: "Certificado da NLW IA da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/iPEIyv9.png",
       alt: "Certificado da Masterclass Foco Node.js da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/QHZO5Av.png",
       alt: "Certificado do evento 'PrograMaria encontros: por uma tecnologia anticapacitista' em parceria com o Grupo Boticário.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/f0e94dce-7b34-45a9-bfd5-870aee7fab24",
       src: "https://imgur.com/DhlTAG1.png",
       alt: "Certificado do evento IA para Devs da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/faa9c531-ed80-4621-baa0-753dbe9a3d6e",
       src: "https://imgur.com/a7vUE7h.png",
       alt: "Certificado do programa Explorer da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/C5JAJyX.png",
       alt: "Certificado da Codecon Digital 2023.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/Pmjinm4.png",
       alt: "Certificado da capacitação Adas da SCM (Se Candidate, Mulher!) Academy.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/o4LEUTB.png",
       alt: "Certificado do Hackathon #01 da Orange Juice.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/3TrfYSP.png",
       alt: "Certificado da Masterclass Foco React da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "",
       src: "https://imgur.com/vVoOYgO.png",
       alt: "Certificado do curso Desenvolvimento Web Front End Node da Digital House.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/fca8a795-46ce-4dda-9fd6-8e5be7fa521b",
       src: "https://imgur.com/1YmADpf.png",
       alt: "Certificado da Trilha Especializar do Discover da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/034b5792-e509-4693-9251-c31e98061696",
       src: "https://imgur.com/HwCfb8y.png",
       alt: "Certificado da Trilha Fundamentar do Discover da Rocketseat.",
     },
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/042fd1a9-ff20-4af9-94e3-02614342a6af",
       src: "https://imgur.com/5IUY5BG.png",
       alt: "Certificado da Trilha Conectar do Discover da Rocketseat.",
     },
@@ -267,16 +285,16 @@ function App() {
         <Element name="about">
           <Section id="about" title="Sobre">
             <p>
-              Sou uma Engenheira Mecânica com mestrado em Ciência dos Materiais
-              e formação complementar em programação, atuando no{" "}
-              <span>Desenvolvimento Front-end</span>.
+              Sou uma <span>Desenvolvedora Front-end</span> com formação em
+              Engenheira Mecânica e mestrado. Possuo habilidades em HTML, CSS,
+              JavaScript, Git, ReactJS, TypeScript, TailwindCSS, Node.js e SQL.
             </p>
             <p>
-              Tenho experiência como Desenvolvedora Front-end Freelancer na{" "}
+              Tenho experiência como Desenvolvedora Freelancer na{" "}
               <span>Minicactus Games</span>, onde desenvolvi e mantenho o site
               da empresa. Também faço parte do <span>Space Squad</span>, uma
-              comunidade de tecnologia da Rocketseat, onde compartilho
-              conhecimentos e aprendo com outros desenvolvedores.
+              comunidade de tecnologia da <span>Rocketseat</span>, onde
+              compartilho conhecimentos e aprendo com outros desenvolvedores.
             </p>
             <p>
               Meu objetivo é trabalhar como{" "}
@@ -328,7 +346,11 @@ function App() {
             >
               {certificatesData.map((certificate, id) => (
                 <swiper-slide key={id}>
-                  <Certificate src={certificate.src} alt={certificate.alt} />
+                  <Certificate
+                    href={certificate.href}
+                    src={certificate.src}
+                    alt={certificate.alt}
+                  />
                 </swiper-slide>
               ))}
             </swiper-container>

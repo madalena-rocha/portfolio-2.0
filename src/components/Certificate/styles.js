@@ -9,7 +9,7 @@ export const Container = styled.div`
     transform: scale(1.1);
   }
 
-  > img {
+  > a img {
     width: 100%;
     height: 100%;
     object-fit: cover;

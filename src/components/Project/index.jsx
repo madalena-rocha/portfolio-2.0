@@ -11,9 +11,9 @@ export function Project({ title, repo, demo, description, path, tags }) {
         <h3>{title}</h3>
 
         <Icons>
-          <a 
-            href={`https://github.com/madalena-rocha/${repo}`} 
-            target="_blank" 
+          <a
+            href={`https://github.com/madalena-rocha/${repo}`}
+            target="_blank"
             title="Repositório"
           >
             <GithubLogo size={24} />
@@ -23,13 +23,19 @@ export function Project({ title, repo, demo, description, path, tags }) {
           </a>
         </Icons>
       </Header>
-      
+
       <p>{description}</p>
 
       <Preview>
-        <img src={path} />
+        <a
+          href={`https://github.com/madalena-rocha/${repo}`}
+          target="_blank"
+          title="Abrir"
+        >
+          <img src={path} />
+        </a>
       </Preview>
-      
+
       <Tags>
         {tags.map((tag, tagIndex) => (
           <Tag key={tagIndex} title={tag} />

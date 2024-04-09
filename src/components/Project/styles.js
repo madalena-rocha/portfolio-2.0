@@ -28,7 +28,7 @@ export const Icons = styled.div`
 `;
 
 export const Preview = styled.div`
-  > img {
+  > a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
