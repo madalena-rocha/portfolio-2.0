@@ -134,6 +134,12 @@ function App() {
   const certificatesData = [
     {
       id: uuidv4(),
+      href: "https://app.rocketseat.com.br/certificates/d82c5196-ed9b-4638-8d03-d8dc0d901452",
+      src: "https://imgur.com/8aqyNUp.png",
+      alt: "Certificado do curso Clean Code da Rocketseat.",
+    },
+    {
+      id: uuidv4(),
       href: "https://app.rocketseat.com.br/certificates/4fb80053-634e-4609-9f96-5142c753a4d3",
       src: "https://imgur.com/MWo9s5G.png",
       alt: "Certificado da NLW Unite da Rocketseat.",
@@ -149,12 +155,6 @@ function App() {
       href: "https://app.rocketseat.com.br/certificates/4aa9b78d-3130-459d-8e6c-92b7446bd954",
       src: "https://imgur.com/9u2hEVI.png",
       alt: "Certificado da NLW Expert da Rocketseat.",
-    },
-    {
-      id: uuidv4(),
-      href: "",
-      src: "https://imgur.com/oXuBNke.png",
-      alt: "Certificado da 3ª edição do Hackathon das Manas.",
     },
     {
       id: uuidv4(),
@@ -191,12 +191,6 @@ function App() {
       href: "https://app.rocketseat.com.br/certificates/faa9c531-ed80-4621-baa0-753dbe9a3d6e",
       src: "https://imgur.com/a7vUE7h.png",
       alt: "Certificado do programa Explorer da Rocketseat.",
-    },
-    {
-      id: uuidv4(),
-      href: "",
-      src: "https://imgur.com/C5JAJyX.png",
-      alt: "Certificado da Codecon Digital 2023.",
     },
     {
       id: uuidv4(),
