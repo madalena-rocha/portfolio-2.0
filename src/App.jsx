@@ -134,6 +134,12 @@ function App() {
   const certificatesData = [
     {
       id: uuidv4(),
+      href: "",
+      src: "https://imgur.com/Yngr7Cv.png",
+      alt: "Certificado do evento 'PrograMaria Summit 2024' da PrograMaria.",
+    },
+    {
+      id: uuidv4(),
       href: "https://app.rocketseat.com.br/certificates/d82c5196-ed9b-4638-8d03-d8dc0d901452",
       src: "https://imgur.com/8aqyNUp.png",
       alt: "Certificado do curso Clean Code da Rocketseat.",
